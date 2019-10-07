@@ -1,4 +1,8 @@
-/* Bootstrap Helpers */
+/*
+Bootstrap Helpers
+by Adam Culpepper (@adamculpepper)
+*/
+
 .center-transform {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
 .center-transform-hor {position:absolute; left:50%; transform:translateX(-50%);}
 .center-transform-vert {position:absolute; top:50%; transform:translateY(-50%);}
@@ -9,6 +13,17 @@ hr.thinner {margin:15px 0;}
 .blue {background:lightblue!important;}
 .yellow {background:lightyellow!important;}
 .green {background:lightgreen!important;}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+	   -moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+								  supported by Chrome and Opera */
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
 
 /* Add-on: Bootstrap 4, hidden-{breakpoint}-{up/down} */
 /* taken from Bootstrap 4, alpha 6 */
@@ -23,6 +38,8 @@ hr.thinner {margin:15px 0;}
 @media (min-width:1200px)	{ .hidden-xl-up		{display:none!important;} }
 .hidden-xl-down {display:none!important;}
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Add-on: Bootstrap 4, hidden-{breakpoint} */
 /* taken from Bootstrap 3.3.6, converted to Bootstrap 4 */
 @media (max-width:575px)	{ .hidden-xs {display:none!important;} }
@@ -31,6 +48,8 @@ hr.thinner {margin:15px 0;}
 @media (min-width:992px) and (max-width:1199px)	{ .hidden-lg {display:none!important;} }
 @media (min-width:1200px)	{ .hidden-xl {display:none!important;} }
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Bootstrap 4 helper: split button icons */
 .btn-group,
 .btn-group .btn-label-icon,
@@ -38,11 +57,15 @@ hr.thinner {margin:15px 0;}
 .btn-group .btn-label-icon {margin:-9px; margin-right:9px; padding:10px 12px; background:rgba(0, 0, 0, .10); font-size:inherit; line-height:inherit; border-radius:.25rem 0 0 .25rem;}
 .btn-group .btn-label-text {margin-left:0;}
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Bootstrap 4 fix for not having .w-{size}-100 */
 @media (min-width: 576px)	{ .w-sm-100 {width:100%;} }
 @media (min-width: 768px)	{ .w-md-100 {width:100%;} }
 @media (min-width: 992px)	{ .w-lg-100 {width:100%;} }
 @media (min-width: 1200px)	{ .w-xl-100 {width:100%;} }
+
+/* ------------------------------------------------------------------------------------------------------- */
 
 /* Bootstrap 4 fix for not having .w-100-{size}-[up/down] */
 .w-100-xs-up {width:100%;}
@@ -56,6 +79,8 @@ hr.thinner {margin:15px 0;}
 @media (min-width:1200px)	{ .w-100-xl-up		{width:100%;} }
 .w-100-xl-down {width:100%;}
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Bootstrap Helper for removing the bottom border on specific breakpoints and up */
 .remove-bottom-border-xs {border-bottom:0!important;}
 @media (min-width:576px)	{ .remove-bottom-border-sm		{border-bottom:0!important;} }
@@ -63,67 +88,23 @@ hr.thinner {margin:15px 0;}
 @media (min-width:992px)	{ .remove-bottom-border-lg		{border-bottom:0!important;} }
 @media (min-width:1200px)	{ .remove-bottom-border-xl		{border-bottom:0!important;} }
 
-/* Bootstrap 4 columns in 5ths */
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths,
-.col-xl-5ths {
-    position:relative;
-    min-height:1px;
-    padding-right:15px;
-    padding-left:15px;
-}
+/* ------------------------------------------------------------------------------------------------------- */
 
-.col-xs-5ths {
-    width:100%!important;
-    float:left;
-}
+/* Icon in input field */
+.icon-field {position:relative;}
+.icon-field i {position:absolute; left:10px; top:50%; transform:translateY(-50%);}
+.icon-field input {padding-left:35px;}
 
-@media (min-width:576px) {
-    .row.sm-5ths {display:inline-block;}
-    .col-sm-5ths {
-		flex:0 0 20%!important;
-		max-width:20%!important;
-        float:left;
-    }
-}
+/* Right align icon */
+.icon-field.icon-right i {left:auto; right:10px;}
+.icon-field.icon-right input {padding-left:.75rem; padding-right:35px;}
 
-@media (min-width:768px) {
-    .row.md-5ths {display:inline-block;}
-    .col-md-5ths {
-        width:20%!important;
-        float:left;
-    }
-}
+/* Using Select2 control */
+.icon-field.with-select2 i {z-index:99;}
+.icon-field.with-select2 .select2-selection__placeholder {padding-left:25px;}
 
-@media (min-width:992px) {
-    .row.lg-5ths {display:inline-block;}
-    .col-lg-5ths {
-		flex:0 0 20%!important;
-		max-width:20%!important;
-        float:left;
-    }
-}
-
-@media (min-width:1200px) {
-    .row.xl-5ths {display:inline-block;}
-    .col-xl-5ths {
-		flex:0 0 20%!important;
-		max-width:20%!important;
-        float:left;
-    }
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
+.icon-field.with-select2.icon-right i {right:30px;}
+.icon-field.with-select2.icon-right .select2-selection__placeholder {padding-left:0;}
 
 /* ------------------------------------------------------------------------------------------------------- */
 
@@ -230,23 +211,77 @@ hr.thinner {margin:15px 0;}
 }
 
 @-webkit-keyframes form-spin{
-    from{
-        -webkit-transform:rotate(0);
-        transform:rotate(0)
-    }
-    to{
-        -webkit-transform:rotate(360deg);
-        transform:rotate(360deg)
-    }
+	from{
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
 }
 
 @keyframes form-spin{
-    from{
-        -webkit-transform:rotate(0);
-        transform:rotate(0)
-    }
-    to{
-        -webkit-transform:rotate(360deg);
-        transform:rotate(360deg)
-    }
+	from{
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Bootstrap 4 columns in 5ths */
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths,
+.col-xl-5ths {
+	position:relative;
+	min-height:1px;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+.col-xs-5ths {
+	width:100%!important;
+	float:left;
+}
+
+@media (min-width:576px) {
+	.row.sm-5ths {display:inline-block;}
+	.col-sm-5ths {
+		flex:0 0 20%!important;
+		max-width:20%!important;
+		float:left;
+	}
+}
+
+@media (min-width:768px) {
+	.row.md-5ths {display:inline-block;}
+	.col-md-5ths {
+		width:20%!important;
+		float:left;
+	}
+}
+
+@media (min-width:992px) {
+	.row.lg-5ths {display:inline-block;}
+	.col-lg-5ths {
+		flex:0 0 20%!important;
+		max-width:20%!important;
+		float:left;
+	}
+}
+
+@media (min-width:1200px) {
+	.row.xl-5ths {display:inline-block;}
+	.col-xl-5ths {
+		flex:0 0 20%!important;
+		max-width:20%!important;
+		float:left;
+	}
 }
