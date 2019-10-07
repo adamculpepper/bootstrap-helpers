@@ -108,6 +108,16 @@ hr.thinner {margin:15px 0;}
 
 /* ------------------------------------------------------------------------------------------------------- */
 
+/* Inline Form Field */
+.inline-form-fields {display:table; width:100%;}
+.inline-form-fields input {width:100%;}
+.inline-form-fields .button  {width:1px;}
+
+.inline-form-fields input,
+.inline-form-fields .button {display:table-cell;}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
 .opacityPulse-css {
 	animation: opacityPulse 2s ease-out;
 	animation-iteration-count: infinite; 
