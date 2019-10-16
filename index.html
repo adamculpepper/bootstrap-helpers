@@ -1,47 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" media="screen" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" media="screen" href="helpers.css">
+	</head>
+	<body>
 
-<h1>Bootstrap 4 - Icon in input</h1>
-<div class="container">
-	<div class="row p-3">
+		<h1>Bootstrap CSS Helpers</h1>
 
-		<div class="form-inline">
-			<div class="form-group">
-				<span class="icon-field">
-					<i class="fa fa-search" aria-hidden="true"></i>
-					<input type="text" class="form-control" placeholder="Search">
-				</span>
-				<button type="submit" class="btn btn-outline-primary ml-2">Search</button>
+		<h3>Bootstrap 4 - Icon in input</h3>
+		<div class="container">
+			<div class="row p-3">
+
+				<div class="form-inline">
+					<div class="form-group">
+						<span class="icon-field">
+							<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" class="form-control" placeholder="Search">
+						</span>
+						<button type="submit" class="btn btn-outline-primary ml-2">Search</button>
+					</div>
+				</div>
+
+			</div>
+			<div class="row p-3">
+
+				<div class="form-inline">
+					<div class="form-group">
+						<span class="icon-field icon-right">
+							<input type="text" class="form-control" placeholder="Search">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</span>
+						<button type="submit" class="btn btn-outline-primary ml-2">Search</button>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
-	</div>
-	<div class="row p-3">
+		<h3>Bootstrap 4 - inline form</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 p-3">
+				
+					<div class="inline-form-fields">
+						<input type="text" class="form-control">
+						<span class="button">
+							<button class="btn btn-outline-primary">Search</button>
+						</span>
+					</div>
 
-		<div class="form-inline">
-			<div class="form-group">
-				<span class="icon-field icon-right">
-					<input type="text" class="form-control" placeholder="Search">
-					<i class="fa fa-search" aria-hidden="true"></i>
-				</span>
-				<button type="submit" class="btn btn-outline-primary ml-2">Search</button>
+				</div>
 			</div>
 		</div>
 
-	</div>
-</div>
+		<h3>Bootstrap 4 - animated form loading</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 p-3">
+				
+					<div class="form-loading border"></div>
 
+					<br><br>
 
-<h1>Bootstrap 4 - inline form</h1>
-<div class="container">
-	<div class="row">
-		<div class="col-12 p-3">
-		
-			<div class="inline-form-fields">
-				<input type="text" class="form-control">
-				<span class="button">
-					<button class="btn btn-outline-primary">Search</button>
-				</span>
+					<div class="form-loading form-loading-inverted"></div>
+
+				</div>
 			</div>
-
 		</div>
-	</div>
-</div>
+
+	</body>
+</html>
+
+
