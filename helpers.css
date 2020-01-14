@@ -93,6 +93,7 @@ hr.thinner {margin:15px 0;}
 /* Icon in input field */
 .icon-field {position:relative; display:block;}
 .icon-field i {position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:0.5; pointer-events:none;}
+.icon-field .no-icon-passthrough i {pointer-events:auto;}
 .icon-field input {padding-left:35px;}
 
 /* Right align icon */
