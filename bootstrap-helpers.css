@@ -91,21 +91,34 @@ hr.thinner {margin:15px 0;}
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* Icon in input field */
-.icon-field {position:relative; display:block;}
-.icon-field i {position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:0.5; pointer-events:none;}
-.icon-field .no-icon-passthrough i {pointer-events:auto;}
-.icon-field input {padding-left:35px;}
+.icon-input {position:relative; display:block;}
+.icon-input input:not([type='submit']) {padding-left:35px;}
+.icon-input input ~ i,
+.icon-input select ~ i {position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:0.30; transition:all 300ms; pointer-events:none;}
+.icon-input.has-float-label:not(.icon-right) label {padding-left:35px;}
+.icon-input.icon-no-passthrough input ~ i {pointer-events:auto;}
+.icon-input.icon-no-passthrough input ~ i:hover {opacity:0.50;}
 
-/* Right align icon */
-.icon-field.icon-right i {left:auto; right:10px;}
-.icon-field.icon-right input {padding-left:.75rem; padding-right:35px;}
+/* Icon: right align */
+.icon-input.icon-right input {padding-left:.75rem; padding-right:35px;}
+.icon-input.icon-right input ~ i,
+.icon-input.icon-right select ~ i {left:auto; right:10px;}
+.icon-input.icon-right input[type='file'] ~ i {z-index:1; right:90px;}
 
 /* Using Select2 control */
-.icon-field.with-select2 i {z-index:99;}
-.icon-field.with-select2 .select2-selection__placeholder {padding-left:25px;}
+.icon-input.with-select2 i {z-index:99;}
+.icon-input.with-select2 .select2-selection__placeholder {padding-left:25px;}
 
-.icon-field.with-select2.icon-right i {right:30px;}
-.icon-field.with-select2.icon-right .select2-selection__placeholder {padding-left:0;}
+.icon-input.with-select2.icon-right i {right:30px;}
+.icon-input.with-select2.icon-right .select2-selection__placeholder {padding-left:0;}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Button in input field */
+.button-in-input {position:relative;}
+.button-in-input input {}
+.button-in-input input + button,
+.button-in-input input + input[type='submit'] {position:absolute; top:0; right:0; margin:2px;}
 
 /* ------------------------------------------------------------------------------------------------------- */
 
