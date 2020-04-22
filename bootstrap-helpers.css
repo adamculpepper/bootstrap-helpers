@@ -189,14 +189,11 @@ hr.thinner {margin:15px 0;}
 			user-select:none;
 }
 
-.form-loading.form-loading-no-min-height {min-height:0px;}
-.form-loading.form-loading-no-min-height:after {top:50%;}
-
 .form-loading:after,
 .form-loading:before {
-	position:absolute;
-	display:block;
 	content:'';
+	display:block;
+	position:absolute;
 }
 
 .form-loading:before {
@@ -205,11 +202,8 @@ hr.thinner {margin:15px 0;}
 	right:0;
 	bottom:0;
 	left:0;
-	background:rgba(255,255,255,.8);
+	background:rgba(0, 0, 0, 0.50);
 }
-
-.form-loading.form-loading-rounded:before {border-radius:4px}
-
 .form-loading:after {
 	z-index:1001;
 	/*top:50%;*/
@@ -224,45 +218,39 @@ hr.thinner {margin:15px 0;}
 	animation-iteration-count:infinite;
 	border-width:2px;
 	border-style:solid;
-	border-color:#767676 rgba(0,0,0,.1) rgba(0,0,0,.1);
 	border-radius:999px;
+	border-color:#fff rgba(255, 255, 255, 0.20) rgba(255, 255, 255, 0.20);
 }
 
-.form-loading.center-to-window:after {
-	/* Center to the window */
-	position:fixed;
-	top:50%;
-	left:50%;
-	transform:translate(-50%, -50%);
-}
-
-.form-loading.form-loading-inverted:before {
-	background:rgba(0,0,0,.45);
-}
-
-.form-loading.form-loading-inverted:after {
-	border-color:#fff rgba(255,255,255,.2) rgba(255,255,255,.2);
-}
+/* Options */
+.form-loading.form-loading-no-min-height {min-height:0px;}
+.form-loading.form-loading-no-min-height:after {top:50%;}
+.form-loading.form-loading-light:before {background:rgba(255,255,255,.8);}
+.form-loading.form-loading-light:after {border-color:#767676 rgba(0,0,0,.1) rgba(0,0,0,.1);}
+.form-loading.form-loading-rounded:before {border-radius:4px;}
+.form-loading.center-to-element {position:relative;}
+.form-loading.center-to-element:after {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);} 	/* Center to the parent element */
+.form-loading.center-to-window:after {position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);} 		/* Center to the window */
 
 @-webkit-keyframes form-spin{
-	from{
+	from {
 		-webkit-transform:rotate(0);
-		transform:rotate(0)
+		transform:rotate(0);
 	}
-	to{
+	to {
 		-webkit-transform:rotate(360deg);
-		transform:rotate(360deg)
+		transform:rotate(360deg);
 	}
 }
 
 @keyframes form-spin{
-	from{
+	from {
 		-webkit-transform:rotate(0);
-		transform:rotate(0)
+		transform:rotate(0);
 	}
-	to{
+	to {
 		-webkit-transform:rotate(360deg);
-		transform:rotate(360deg)
+		transform:rotate(360deg);
 	}
 }
 
