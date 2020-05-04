@@ -7,8 +7,8 @@ by Adam Culpepper (@adamculpepper)
 .center-transform-hor {position:absolute; left:50%; transform:translateX(-50%);}
 .center-transform-vert {position:absolute; top:50%; transform:translateY(-50%);}
 .flex-center {display:flex; align-items:center; justify-content:center;}
-.flex-center-h {display:flex; align-items:center;}
-.flex-center-v {display:flex; justify-content:center;}
+.flex-center-v {display:flex; align-items:center;}
+.flex-center-h {display:flex; justify-content:center;}
 .overflow {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 hr.red {border-bottom:1px solid red;}
 hr.thinner {margin:15px 0;}
