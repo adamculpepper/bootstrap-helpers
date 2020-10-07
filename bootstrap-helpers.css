@@ -100,6 +100,12 @@ hr.thinner {margin:15px 0;}
 
 /* ------------------------------------------------------------------------------------------------------- */
 
+/* Add-on: Bootstrap 4, XXL modals */
+@media (min-width: 576px)	{ .modal-dialog.modal-xxl {max-width:95%;} }
+@media (min-width: 1200px)	{ .modal-dialog.modal-xxl {max-width:1140px;} }
+
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Icon in input field */
 .icon-input {position:relative; display:block;}
 .icon-input input:not([type='submit']) {padding-left:35px;}
